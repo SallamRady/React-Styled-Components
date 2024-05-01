@@ -1,7 +1,8 @@
 import styled from "styled-components";
 
-export const StyledButton = styled.button`
-  background-color: #bf4f74;
+export const StyledButton = styled.button<StyledButtonType>`
+  background-color: ${(props) =>
+    props?.variant == "oulined" ? "#fff" : "#bf4f74"};
   color: white;
   font-size: 1em;
   font-weight: 600;
@@ -11,3 +12,7 @@ export const StyledButton = styled.button`
   border-radius: 3px;
   cursor: pointer;
 `;
+
+type StyledButtonType = {
+  variant?: string;
+};

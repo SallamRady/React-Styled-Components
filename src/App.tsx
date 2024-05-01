@@ -6,6 +6,7 @@ function App() {
     <div className="App">
       <button>Original Button</button>
       <StyledButton>Styled Button</StyledButton>
+      <StyledButton variant="outlined">Styled Button</StyledButton>
     </div>
   );
 }
