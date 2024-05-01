@@ -2,8 +2,8 @@ import styled from "styled-components";
 
 export const StyledButton = styled.button<StyledButtonType>`
   background-color: ${(props) =>
-    props?.variant == "oulined" ? "#fff" : "#bf4f74"};
-  color: white;
+    props?.variant == "outlined" ? "#fff" : "#bf4f74"};
+  color: ${(props) => (props.variant == "outlined" ? "#bf4f74" : "#fff")};
   font-size: 1em;
   font-weight: 600;
   margin: 1em;
