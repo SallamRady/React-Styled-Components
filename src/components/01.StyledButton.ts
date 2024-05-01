@@ -11,6 +11,13 @@ export const StyledButton = styled.button<StyledButtonType>`
   border: 2px solid #bf4f74;
   border-radius: 3px;
   cursor: pointer;
+  transition: all 0.3s ease-in-out;
+
+  &:hover {
+    background-color: ${(props) =>
+    props?.variant != "outlined" ? "#fff" : "#bf4f74"};
+  color: ${(props) => (props.variant != "outlined" ? "#bf4f74" : "#fff")};
+  }
 `;
 
 type StyledButtonType = {
